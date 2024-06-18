@@ -4,7 +4,7 @@
     }
 
     *{
-        boxsizing: border-box;
+        box-sizing: border-box;
     }
 
     html {
@@ -48,7 +48,7 @@
     border-radius: 100vw 0 0 100vw;
     }
 
-    .nav-list li .active{
+    .nav-list li.active{
         background: var(--body-bg);
         position: relative;
     }
@@ -56,8 +56,8 @@
 
 
 
-    .nav-list li .active::before,
-    .nav-list li .active::after {
+    .nav-list li.active::before,
+    .nav-list li.active::after {
     --border-radius: 2rem;
         content:'';
         position: absolute;
@@ -67,12 +67,12 @@
         background: var(--nav-bg);
     }
 
-    .nav-list li .active::before {
+    .nav-list li.active::before {
         top: calc(var(--border-radius)*-1);
         border-radius: 0 0 100vw 0;
         box-shadow: 10px 10px 0 10px var(--body-bg);
     }
-    .nav-list li .active::after{
+    .nav-list li.active::after{
     border-radius: 0 100vw 0 0;
         box-shadow: 10px -10px 0 10px var(--body-bg);
         bottom: calc(var(--border-radius)*-1) ;
