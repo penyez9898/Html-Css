@@ -9,7 +9,7 @@
 
     html {
 
-        font-family: system-uni;
+        font-family: system-uni, sans-serif;
     }
 
     body {
@@ -52,8 +52,6 @@
         background: var(--body-bg);
         position: relative;
     }
-
-
 
 
     .nav-list li.active::before,
