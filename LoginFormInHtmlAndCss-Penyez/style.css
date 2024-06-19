@@ -24,7 +24,6 @@
         color: #fff;
         border-radius: 10px;
         padding: 30px 40px;
-
     }
 
     .wrapper h1{
@@ -110,7 +109,7 @@
     }
 
 
-    .wrapper button {
+    .wrapper button{
     width:100%;
         height: 45px;
         background: #fff;
@@ -127,25 +126,27 @@
     .wrapper button:hover{
        background: #333333;
         color: #ffffff;
-
     }
 
 
     .wrapper .social-login{
         display: flex;
+        flex-direction: column;
+        height:90px;
+       /* row-gap: 10px; To create a gap between flex items, use the gap,
+       column-gap, and row-gap properties.flex satırları arasındaki
+        boşluğu rıw-gap ile yapıyorsun ancak  colum gap ile aynı satırdaki öğeler arasında
+        ki boşlukları olşuturuyorsun*/
         justify-content: space-between;
-        margin-top: 20px;
     }
 
     .social-login a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         text-decoration: none;
         color: white;
         padding: 10px;
         border-radius: 5px;
-        width:48%;
+
+       /* justify-content: space-between; dikeyde boşluk; aligmitem ise yatayda boşluk demek*/
     }
 
     .social-login a.google {
@@ -158,6 +159,12 @@
     .social-login i{
         margin-right: 8px;
     }
+
+    .social-login a:hover{
+        background: #333333;
+        color: #ffffff;
+    }
+
 
     .separator{
         display: flex;
