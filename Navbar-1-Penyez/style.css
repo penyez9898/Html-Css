@@ -138,5 +138,9 @@
           font-family: system-uni;
           font-size: 20px;
       }
+      .about a {
+          text-decoration: underline;
+          color: white;
+      }
 
 
