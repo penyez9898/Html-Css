@@ -5,11 +5,13 @@
 
     *{
         box-sizing: border-box;
+        /*border: 1px solid red; kırmızı çizgilerle
+        her bir div üzerindne layout'u gösteriyor*/
     }
 
     html {
-
         font-family: system-uni, sans-serif;
+
     }
 
     body {
@@ -21,6 +23,8 @@
         display: grid;
         grid-template-columns: 15rem 1fr;
         gap: 4rem;
+        position:fixed;
+
     }
 
 
@@ -31,6 +35,8 @@
     background: var(--nav-bg);
     }
 
+
+
     .nav-list {
         margin: 0;
         padding: 0;
@@ -38,7 +44,6 @@
         display: grid;
         gap: 2rem;
         padding-block: 2rem;
-
     }
 
 
@@ -83,3 +88,55 @@
         position: relative;
         z-index: 10;
     }
+    .input-box {
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 200%;
+        height: auto;
+        margin: 10px;
+        position:relative;
+    }
+    .input-box input {
+        width: 100%;
+        padding: 10px;
+        padding-right: 30px;
+    border-radius: 30px;
+    } /* Boşluk bırakıyoruz ikona yer açmak için */
+
+    .input-box input::placeholder{
+        font-size: 16px;
+    }
+    .input-box i {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: gray;
+    }
+
+    button.btn{
+        margin: 20px;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 16px;
+        width: 50%;
+
+    }
+
+    .nav-list i {
+        position:absolute;
+        right: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+    }
+
+      .about {
+          font-family: system-uni;
+          font-size: 20px;
+      }
+
+
