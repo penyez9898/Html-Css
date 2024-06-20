@@ -36,7 +36,6 @@
     }
 
 
-
     .nav-list {
         margin: 0;
         padding: 0;
@@ -54,9 +53,11 @@
     }
 
     .nav-list li.active{
+        view-transition-name: activeNavTap;
         background: var(--body-bg);
         position: relative;
     }
+
 
 
     .nav-list li.active::before,
@@ -81,6 +82,27 @@
         bottom: calc(var(--border-radius)*-1) ;
 
     }
+
+    .nav-list li:nth-child(1) a {
+        view-transition-name: test;
+    }
+
+    .nav-list li:nth-child(2) a {
+        view-transition-name: test-2;
+    }
+
+    .nav-list li:nth-child(3) a {
+        view-transition-name: test-3;
+    }
+
+    .nav-list li:nth-child(4) a {
+        view-transition-name: test-4;
+    }
+
+    ::view-transition-group (activeNavTap){
+        animation-duration:500ms;
+        animation-timing-function:ease-in-out; }
+
     .nav-list a{
         color: white;
         display: block;
