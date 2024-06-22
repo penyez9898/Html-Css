@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+:root {
+    --background: rgba(0, 214, 170, .85);/* .85 ile ilgili bölümü daha belirgin ya da
+    daha blur yapıyo*/
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #222;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.content {
+    height: 200vh;
+    background-image: url(//unsplash.it/1000/1000);
+    background-color: #333;
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+/* navigation styles start here */
+header{
+    background:var(--background);
+    text-align:center;
+    /* yukarıdaki sadece ikisini yaapıp bıtaktığında logo bölümünün
+    tam doldurmuyor, boşluk var aşağıdaki fixi ekleyip onu yukarıyla tamöamen
+    birleştirdi ve Width ile genişşletti; fixleyince logo bar
+    scrolll esnasında yerinde kalıyor alttaki sayfa akıyor.*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%; /* vidyoda kullanılış şekli çok daha anlaşılır */
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    display: none;
+}
+
+nav ul{ /* burada bir bütün olarak nav listteki itemları  bir bütün olarak çevresine olan
+ değerini belirliyor*/
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{ /* nav listedeki her bir item'ı çevresine göre hizalıyor burada */
+   margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: #000;
+}
+
+.nav-toggle:checked ~ nav { /* the ~ looks for any preceeding sibling, it doesn't
+have to be immediately after. (tilde operatörü: bir elementin
+ önceki kardeşlerini seçmek için kullanılır. belirtilen elementten önce gelen herhangi bir kardeşi seçer,
+  ancak hemen sonrasında olmak zorunda değildir. p ~ span {color: red;})   p elementlerinden sonra gelen tüm span elementlerini seçer
+  ve onların metin rengini kırmızı olarak ayarlar.    */
+    display: block;
+
+    /* display: block;: Bu değer, elementi blok seviyesinde görüntüler. Element, sayfada tam genişlikte yer kaplar
+    ve içeriği görünür hale gelir. */
+}
+
+
