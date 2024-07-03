@@ -58,8 +58,6 @@
         position: relative;
     }
 
-
-
     .nav-list li.active::before,
     .nav-list li.active::after {
     --border-radius: 2rem;
@@ -160,6 +158,7 @@
           font-family: system-uni;
           font-size: 20px;
       }
+
       .about a {
           text-decoration: underline;
           color: white;
