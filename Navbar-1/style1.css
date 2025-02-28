@@ -1,0 +1,120 @@
+
+:root {
+    --body-bg: #123;
+    --nav-bg: #234;
+}
+
+*{
+        box-sizing: border-box;
+    }
+
+    html{
+        font-family: system-uni;
+    }
+
+
+    body{
+        min-height: 200vh;
+       margin: 0;
+        font-size: 1.25rem;
+        background:var(--body-bg);
+        color: white;
+        grid-template-columns: 15rem 1fr ;
+        gap: 4rem;
+       /* padding-inline-start: 20rem; */
+    }
+
+    nav{
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        background: var(--nav-bg);
+    }
+
+    .nav-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 4rem;
+        padding-block: 2rem;
+    }
+
+    .nav-list li {
+        padding: 2rem 2rem;
+        margin-left: 2rem;
+        border-radius: 100vw 0 0 100vw;
+    }
+
+    .nav-list li.active{
+        /*view-transition-name: activeNavTab;*/
+        background: var(--body-bg); /* he didn't give a value at the beginning so
+         IntelliJ give a compile error. like this example: --border-radius:2rem; */
+        position: relative;
+    }
+
+    /*
+         .nav-list li:nth-child(1) a {
+          view-transition-name: test;
+        }
+
+        .nav-list li:nth-child(2) a {
+          view-transition-name: test-2;
+        }
+
+        .nav-list li:nth-child(3) a {
+          view-transition-name: test-3;
+        }
+
+     */
+
+    /*::view-transition-group (activeNavTap){
+        animation-duration:500ms;
+        animation-timing-function:ease-in-out;
+    }*/
+
+    .nav-list li.active::before,
+    .nav-list li.active::after {
+        --border-radius:3rem; /* Burada CSS değişkeni tanımladı! ama aşağıda yapmadı onu!
+        given the value for Custom Property amd then
+        it will be used in any values/ 2rem: rem (root em) birimi,
+        kök elementin (<html>) font boyutuna göre belirlenir.
+         Eğer kök elementin font boyutu 16 piksel ise, 2rem 32 pikseli ifade eder.
+*/       --nav-bg:darkblue; /* ama nav'ın arkaplanı açık mavi; burada yaptığı gibi
+            genel body'nin renki olan koyu mavi değil ki!*/
+        content:'';
+        position: absolute;
+        width: var(--border-radius);
+        height: var(--border-radius);
+        right: 0;
+        background:var(--nav-bg);
+        /*border-radius: 100vw;  viewport width: viewport genişliğinin
+        yüzdesini veriyor. Bu değeri kullanmak, elementin köşelerinin
+        çok geniş bir yarıçapla yuvarlatılmasına neden olur ve
+        çoğu durumda elementin tamamen yuvarlak hale gelmesine yol açar.*/
+    }
+
+    .nav-list li.active::before {
+        top: calc(var(--border-radius)* -1);
+        border-radius: 0 0 100vw 0;
+        box-shadow: 10px 10px 0 10px var(--body-bg); /* variable: (--body-background)*/
+    }
+
+    .nav-list li.active::after{
+        border-radius: 0 100vw 0 0;
+        box-shadow: 10px -10px 0 10px var(--body-bg);
+        bottom:calc(var(--border-radius)* -1);
+    }
+
+    .nav-list a {
+        color: white;
+       /* display:block;
+       position:relative;
+       z-index:10; animasyonlar için eklediği ayarlar!
+       */
+        text-decoration: none;
+
+
+    }
+
+

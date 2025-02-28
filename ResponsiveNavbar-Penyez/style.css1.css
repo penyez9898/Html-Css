@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-items: center;
+}
+
+.place {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.place-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(40, 50, 60, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative; /* Close button position */
+}
+
+.place-content input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.place-content button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.place-content i {
+    font-size: 1.5rem;
+    color: black;
+}
+

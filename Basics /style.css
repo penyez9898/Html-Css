@@ -1,0 +1,41 @@
+.red{
+
+    color:red;
+
+}
+/* css selectors
+
+ */
+.myButton{
+    background-color: red;
+    color: aqua;
+    border: 5px solid blue;
+    padding: 1rem  4rem;
+    margin: 3rem 2rem 4rem 2rem;
+    font-size: 1.5rem;
+    border-radius:45px;
+
+}
+
+/*
+Positioning:
+ */
+.position .box  {
+
+    border: 1px solid blue;
+    padding: 1rem;
+    width: 20%;
+    text-align: center;
+
+}
+.position {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    align-items: flex-start;
+    height: 200px;
+    border: 1px solid black;
+    flex-wrap: wrap;
+}
